@@ -3,11 +3,11 @@
  /**
  * Plugin Name: Spicy Extension
  * Description: Custom Elementor extension.
- * Plugin URI:  https://spicy.com/
+ * Plugin URI:  https://spicy.test/
  * Version:     1.0.0
  * Author:      Spicy
- * Author URI:  https://spicy.com/
- * Text Domain: txt-spicy-extension
+ * Author URI:  https://spicy.test/
+ * Text Domain: spicy-extension
  */
 
 	if ( ! defined( 'ABSPATH' ) ) {
@@ -267,7 +267,7 @@
 			//require_once( __DIR__ . '/controls/multi-unit.php' );
 
 			// Register control
-		  //\Elementor\Plugin::$instance->controls_manager->register_control( 'spicy-multi-unit-control', new spicy_multi_unit());
+		       //\Elementor\Plugin::$instance->controls_manager->register_control( 'spicy-multi-unit-control', new spicy_multi_unit());
 
 		}
 
