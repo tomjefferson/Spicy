@@ -44,10 +44,9 @@
 		/**
 		 * Minimum PHP Version
 		 *
-		
-		* @since 1.0.0
-		*
-		* @var string Minimum PHP version required to run the plugin.
+		 * @since 1.0.0
+		 *
+		 * @var string Minimum PHP version required to run the plugin.
 		*/
 		const MINIMUM_PHP_VERSION = '6.0';
 
