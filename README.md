@@ -1,2 +1,2 @@
 # Spicy
-The Extension for Elementor
+The Gallery widget for Elementor
