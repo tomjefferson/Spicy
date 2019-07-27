@@ -1,2 +1,2 @@
 # Spicy
-The Gallery widget for Elementor
+The MultiUnit Control for Elementor
