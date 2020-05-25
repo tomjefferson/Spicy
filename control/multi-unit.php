@@ -5,8 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Spicy multiunit dimension control.
- *
+ * Spicy multiunit dimension control
  * A base control for creating multiunit dimension control. Displays input fields with seprate unit for top,
  * right, bottom, left and the option to link them together.
  *
