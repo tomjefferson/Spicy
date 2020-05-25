@@ -41,13 +41,13 @@
 		const MINIMUM_ELEMENTOR_VERSION = '2.5.11';
 
 		/**
-		 * Minimum PHP Version
-		 *
-		 *
-		 * @since 1.0.0
-	   *
-		 * @var string Minimum PHP version required to run the plugin.
-		 */
+		* Minimum PHP Version
+		*
+		*
+		* @since 1.0.0
+		*
+		* @var string Minimum PHP version required to run the plugin.
+		*/
 		const MINIMUM_PHP_VERSION = '6.0';
 
 		/**
@@ -144,6 +144,7 @@
 
 			// Add Plugin actions
 			add_action( 'elementor/widgets/widgets_registered', [ $this, 'init_widgets' ] );
+			add_action( 'elementor/controls/controls_registered', [ $this, 'init_controls' ] );
 			
 			// Register Widget Styles
 			add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
@@ -240,13 +241,33 @@
 		public function init_widgets() {
 
 			// Include Widget files
-			require_once( __DIR__ . '/widget/gallery.php' );
+			require_once( __DIR__ . '/widgets/oembed.php' );
+			require_once( __DIR__ . '/widgets/gallery.php' );
 
 			// Register widget
+			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \spicy_oEmbed_Widget() );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \spicy_gallery_Widget() );
 
 		}
 
+		/*
+		 * Init Controls
+		 *
+		 * Include controls files and register them
+		 *
+		 * @since 1.0.0				
+		 *
+		 * @access public
+		*/
+		public function init_controls() {
+
+			// Include Control files
+			require_once( __DIR__ . '/controls/multi-unit.php' );
+
+			// Register control
+		    \Elementor\Plugin::$instance->controls_manager->register_control( 'spicy-multi-unit-control', new spicy_multi_unit());
+
+		}
 
     }
 
