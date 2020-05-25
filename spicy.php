@@ -262,7 +262,7 @@
 		public function init_controls() {
 
 			// Include Control files
-			require_once( __DIR__ . '/controls/multi-unit.php' );
+			require_once( __DIR__ . '/control/multi-unit.php' );
 
 			// Register control
 		    \Elementor\Plugin::$instance->controls_manager->register_control( 'spicy-multi-unit-control', new spicy_multi_unit());
