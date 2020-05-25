@@ -241,11 +241,9 @@
 		public function init_widgets() {
 
 			// Include Widget files
-			require_once( __DIR__ . '/widgets/oembed.php' );
 			require_once( __DIR__ . '/widgets/gallery.php' );
 
 			// Register widget
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \spicy_oEmbed_Widget() );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \spicy_gallery_Widget() );
 
 		}
